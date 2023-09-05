@@ -83,7 +83,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                           <h4 className='text-grey capitalize'>
                             {key.split("_").join(" ")}
                           </h4>
-                          <p className='text-black-100 font-semibold capitalize'>
+                          <p className={`text-black-100 font-semibold ${key === 'drive' ? 'uppercase' : 'capitalize'}`}>
                             {value}
                           </p>
                         </div>
