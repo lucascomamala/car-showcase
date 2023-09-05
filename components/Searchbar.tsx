@@ -27,7 +27,7 @@ const Searchbar = () => {
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    
+
     if (manufacturer === '' && model === '') {
       return alert('Please enter a manufacturer or model')
     }
@@ -38,16 +38,18 @@ const Searchbar = () => {
   const updateSearchParams = (model: string, manufaturer: string) => {
     const searchParams = new URLSearchParams(window.location.search)
 
+    // Update or delete the 'model' search parameter based on the 'model' value
     if (model) {
-      searchParams.set('model', model)
+      searchParams.set("model", model);
     } else {
-      searchParams.delete('model')
-    
+      searchParams.delete("model");
     }
+
+    // Update or delete the 'manufacturer' search parameter based on the 'manufacturer' value
     if (manufacturer) {
-      searchParams.set('manufacturer', manufacturer)
+      searchParams.set("manufacturer", manufacturer);
     } else {
-      searchParams.delete('manufacturer')
+      searchParams.delete("manufacturer");
     }
 
     const newPathName = `${window.location.pathname}?${searchParams.toString()}`
@@ -90,4 +92,4 @@ const Searchbar = () => {
   )
 }
 
-    export default Searchbar
+export default Searchbar
