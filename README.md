@@ -1,6 +1,6 @@
 ## 🚗 Live Build
 
-[CarHub]([https://share-prompts-gules.vercel.app/](https://car-ten-silk.vercel.app/))
+[CarHub](https://car-ten-silk.vercel.app/)
 
 ## 🛠️ Installation
 
